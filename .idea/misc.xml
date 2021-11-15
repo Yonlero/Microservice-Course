@@ -5,6 +5,7 @@
       <list>
         <option value="$PROJECT_DIR$/HR-Payroll/pom.xml" />
         <option value="$PROJECT_DIR$/HR-Worker/pom.xml" />
+        <option value="$PROJECT_DIR$/HR-Eureka-Server/pom.xml" />
       </list>
     </option>
   </component>
