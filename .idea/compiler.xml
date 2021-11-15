@@ -20,6 +20,7 @@
       <module name="HR-Eureka-Server" target="11" />
       <module name="HR-Payroll" target="11" />
       <module name="HR-Worker" target="11" />
+      <module name="IdeaProjects" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

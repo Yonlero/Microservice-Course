@@ -4,6 +4,7 @@ import com.abraaofaher.hrworker.model.entities.Worker;
 import com.abraaofaher.hrworker.model.repositories.WorkerRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,10 +18,11 @@ import java.util.Optional;
 public class WorkerController {
 
     private static Logger logger = LoggerFactory.getLogger(WorkerController.class);
-
     private final Environment env;
-
     private final WorkerRepository workerRepository;
+
+    @Value("${test.config}")
+    private String testConfig;
 
     public WorkerController(WorkerRepository workerRepository, Environment env) {
         this.workerRepository = workerRepository;
@@ -31,6 +33,12 @@ public class WorkerController {
     public ResponseEntity<List<Worker>> findAll() {
         List<Worker> workerList = workerRepository.findAll();
         return ResponseEntity.ok(workerList);
+    }
+
+    @GetMapping(value = "/configs")
+    public ResponseEntity<List<Worker>> getConfig() {
+        logger.info("CONFIG : " + testConfig);
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping(value = "/{id}")

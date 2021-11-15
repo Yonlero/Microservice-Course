@@ -8,6 +8,7 @@
         <option value="$PROJECT_DIR$/HR-Eureka-Server/pom.xml" />
         <option value="$PROJECT_DIR$/HR-ApiGateway-Zuul/pom.xml" />
         <option value="$PROJECT_DIR$/HR-Config-Server/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
