@@ -15,10 +15,7 @@ import java.util.Collections;
 public class HrPayrollApplication {
 
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(HrPayrollApplication.class);
-        app.setDefaultProperties(Collections
-                .singletonMap("server.port", "8101"));
-        app.run(args);
+        SpringApplication.run(HrPayrollApplication.class, args);
     }
 
 }
