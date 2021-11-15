@@ -2,6 +2,7 @@ package com.abraaofaher.hrworker.controller;
 
 import com.abraaofaher.hrworker.model.entities.Worker;
 import com.abraaofaher.hrworker.model.repositories.WorkerRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,12 +13,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping(value = "/workers")
 public class WorkerController {
-
-    private final WorkerRepository workerRepository;
-
-    public WorkerController(WorkerRepository workerRepository) {
-        this.workerRepository = workerRepository;
-    }
+    @Autowired
+    private WorkerRepository workerRepository;
 
     @GetMapping
     public ResponseEntity<List<Worker>> findAll() {
