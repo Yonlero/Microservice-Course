@@ -22,6 +22,8 @@
         <module>HR-Payroll</module>
         <module>HR-Worker</module>
         <module>HR-Eureka-Server</module>
+        <module>HR-ApiGateway-Zuul</module>
+        <module>HR-Config-Server</module>
     </modules>
 
     <dependencies>
