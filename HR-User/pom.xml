@@ -10,7 +10,7 @@
     </parent>
     <artifactId>HR-User</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name><HR-User></HR-User></name>
+    <name>HR-User</name>
     <description>User Microservice</description>
 
     <properties>
