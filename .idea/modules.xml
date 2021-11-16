@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/HR-Config-Server/HR-Config-Server.iml" filepath="$PROJECT_DIR$/HR-Config-Server/HR-Config-Server.iml" />
       <module fileurl="file://$PROJECT_DIR$/HR-Eureka-Server/HR-Eureka-Server.iml" filepath="$PROJECT_DIR$/HR-Eureka-Server/HR-Eureka-Server.iml" />
       <module fileurl="file://$PROJECT_DIR$/HR-Payroll/HR-Payroll.iml" filepath="$PROJECT_DIR$/HR-Payroll/HR-Payroll.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HR-User/HR-User.iml" filepath="$PROJECT_DIR$/HR-User/HR-User.iml" />
       <module fileurl="file://$PROJECT_DIR$/HR-Worker/HR-Worker.iml" filepath="$PROJECT_DIR$/HR-Worker/HR-Worker.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/IdeaProjects.iml" filepath="$PROJECT_DIR$/.idea/IdeaProjects.iml" />
     </modules>
