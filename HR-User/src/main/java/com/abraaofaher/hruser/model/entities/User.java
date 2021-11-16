@@ -1,6 +1,7 @@
 package com.abraaofaher.hruser.model.entities;
 
 import lombok.*;
+import org.checkerframework.common.aliasing.qual.Unique;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -23,6 +24,7 @@ public class User implements Serializable {
     @NotNull(message = "Campo Nome é Obrigatorio")
     private String name;
     @NotNull(message = "Campo E-mail é Obrigatorio")
+    @Column(unique = true)
     private String email;
     @NotNull(message = "Campo Senha é Obrigatorio")
     private String password;
@@ -32,5 +34,6 @@ public class User implements Serializable {
                 joinColumns = @JoinColumn(name = "user_id"),
                 inverseJoinColumns = @JoinColumn(name = "role_id")
             )
-    private Set<Role> roles = new HashSet<>();
+    private
+    Set<Role> roles = new HashSet<>();
 }

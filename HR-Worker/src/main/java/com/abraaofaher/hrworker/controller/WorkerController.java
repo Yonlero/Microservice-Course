@@ -19,16 +19,10 @@ import java.util.Optional;
 @RequestMapping(value = "/workers")
 public class WorkerController {
 
-    private static Logger logger = LoggerFactory.getLogger(WorkerController.class);
-    private final Environment env;
     private final WorkerRepository workerRepository;
 
-    @Value("${test.config}")
-    private String testConfig;
-
-    public WorkerController(WorkerRepository workerRepository, Environment env) {
+    public WorkerController(WorkerRepository workerRepository) {
         this.workerRepository = workerRepository;
-        this.env = env;
     }
 
     @GetMapping
@@ -39,14 +33,12 @@ public class WorkerController {
 
     @GetMapping(value = "/configs")
     public ResponseEntity<List<Worker>> getConfig() {
-        logger.info("CONFIG : " + testConfig);
         return ResponseEntity.noContent().build();
     }
 
     @GetMapping(value = "/{id}")
     @ResponseStatus(HttpStatus.FOUND)
     public ResponseEntity<Worker> findById(@PathVariable Long id) {
-        logger.info("PORT = " + env.getProperty("local.server.port"));
         Optional<Worker> worker = workerRepository.findById(id);
         return ResponseEntity.ok(worker.get());
     }
