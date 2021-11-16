@@ -24,6 +24,7 @@
         <module>HR-Eureka-Server</module>
         <module>HR-ApiGateway-Zuul</module>
         <module>HR-Config-Server</module>
+        <module>HR-OAuth</module>
     </modules>
 
     <dependencies>

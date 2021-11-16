@@ -10,6 +10,7 @@
         <option value="$PROJECT_DIR$/HR-Config-Server/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/HR-User/pom.xml" />
+        <option value="$PROJECT_DIR$/HR-OAuth/pom.xml" />
       </list>
     </option>
   </component>
