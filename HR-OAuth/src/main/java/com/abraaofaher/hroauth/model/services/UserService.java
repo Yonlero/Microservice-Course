@@ -4,12 +4,15 @@ import com.abraaofaher.hroauth.feignClients.UserFeignClient;
 import com.abraaofaher.hroauth.model.entities.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
 
 @Service
-public class UserService implements Serializable {
+public class UserService implements UserDetailsService {
 
     Logger logger = LoggerFactory.getLogger(UserService.class);
     private UserFeignClient userFeignClient;
@@ -25,6 +28,17 @@ public class UserService implements Serializable {
             throw new IllegalArgumentException("Email not found");
         }
         logger.info("email found " + email);
+        return user;
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
+        User user = userFeignClient.findByEmail(s).getBody();
+        if( user == null){
+            logger.error("Email not found" + s);
+            throw new UsernameNotFoundException("Email not found");
+        }
+        logger.info("email found " + s);
         return user;
     }
 }
